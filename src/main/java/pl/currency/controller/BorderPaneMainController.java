@@ -1,4 +1,4 @@
-package controller;
+package pl.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import pl.*;
 
 
 import java.io.IOException;
@@ -15,6 +16,7 @@ import java.time.Period;
 public class BorderPaneMainController {
     private LocalDate localDate;
     private LocalDate date;
+    private DownloadData downloadData;
     ObservableList currencyList = FXCollections.observableArrayList("USD", "EUR", "GBP", "CHF", "AUD", "CAD", "SGD", "JPY","RUB","SEK");
     ObservableList analysisList = FXCollections.observableArrayList("Wyznaczenie ilości sesji", "Miary statystyczne", "Rozkład częstości zmian");
     ObservableList periodList = FXCollections.observableArrayList("Tydzień" , "2 Tygodnie", "Miesiąc", "1/4 Roku", "1/2 Roku", "Rok");
