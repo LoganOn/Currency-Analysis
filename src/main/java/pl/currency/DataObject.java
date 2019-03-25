@@ -1,3 +1,5 @@
+package pl.currency;
+
 import java.util.List;
 
 public class DataObject {

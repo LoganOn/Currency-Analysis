@@ -1,5 +1,8 @@
+package pl.currency;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import pl.currency.DataObject;
 
 import java.io.*;
 import java.net.URL;

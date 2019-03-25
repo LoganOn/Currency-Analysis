@@ -1,3 +1,5 @@
+package pl.currency;
+
 import java.text.NumberFormat;
 import java.util.Locale;
 

@@ -1,4 +1,4 @@
-package pl.controller;
+package pl.currency.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
-import pl.*;
+import pl.currency.DownloadData;
 
 
 import java.io.IOException;
@@ -64,38 +64,39 @@ public class BorderPaneMainController {
             case "Tydzień":
                 localDate = LocalDate.now();
                 date = localDate.minus(Period.ofWeeks(1));
-                url = "http://api.nbp.pl/api/exchangerates/rates/A/" + value1 + "/" + date.toString() + "/" + localDate.toString() + "/";
+                url = "http://api.nbp.pl/api/exchangerates/rates/A/"+ value1 +"/" + date.toString()+"/"+localDate.toString()+"/?format=json";
+                downloadData = new DownloadData(url);
                 System.out.println(url);
                 break;
             case "2 Tygodnie":
                 localDate = LocalDate.now();
                 date = localDate.minus(Period.ofWeeks(2));
-                url = "http://api.nbp.pl/api/exchangerates/rates/A/" + value1 + "/" + date.toString() + "/" + localDate.toString() + "/";
-                System.out.println(url);
+                url = "http://api.nbp.pl/api/exchangerates/rates/A/"+ value1 +"/" + date.toString()+"/"+localDate.toString()+"/?format=json";
+                downloadData = new DownloadData(url);
                 break;
             case "Miesiąc":
                 localDate = LocalDate.now();
                 date = localDate.minus(Period.ofMonths(3));
-                url = "http://api.nbp.pl/api/exchangerates/rates/A/" + value1 + "/" + date.toString() + "/" + localDate.toString() + "/";
-                System.out.println(url);
+                url = "http://api.nbp.pl/api/exchangerates/rates/A/"+ value1 +"/" + date.toString()+"/"+localDate.toString()+"/?format=json";
+                downloadData = new DownloadData(url);
                 break;
             case "1/2 Roku":
                 localDate = LocalDate.now();
                 date = localDate.minus(Period.ofMonths(1));
-                url = "http://api.nbp.pl/api/exchangerates/rates/A/" + value1 + "/" + date.toString() + "/" + localDate.toString() + "/";
-                System.out.println(url);
+                url = "http://api.nbp.pl/api/exchangerates/rates/A/"+ value1 +"/" + date.toString()+"/"+localDate.toString()+"/?format=json";
+                downloadData = new DownloadData(url);
                 break;
             case "1/4 Roku":
                 localDate = LocalDate.now();
                 date = localDate.minus(Period.ofMonths(6));
-                url = "http://api.nbp.pl/api/exchangerates/rates/A/" + value1 + "/" + date.toString() + "/" + localDate.toString() + "/";
-                System.out.println(url);
+                url = "http://api.nbp.pl/api/exchangerates/rates/A/"+ value1 +"/" + date.toString()+"/"+localDate.toString()+"/?format=json";
+                downloadData = new DownloadData(url);
                 break;
             case "Rok":
                 localDate = LocalDate.now();
                 date = localDate.minus(Period.ofYears(1));
-                url = "http://api.nbp.pl/api/exchangerates/rates/A/" + value1 + "/" + date.toString() + "/" + localDate.toString() + "/";
-                System.out.println(url);
+                url = "http://api.nbp.pl/api/exchangerates/rates/A/"+ value1 +"/" + date.toString()+"/"+localDate.toString()+"/?format=json";
+                downloadData = new DownloadData(url);
                 break;
         }
 
